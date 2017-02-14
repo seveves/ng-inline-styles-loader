@@ -53,31 +53,38 @@ describe('loader', function() {
       .eql(fixtures.autoprefixerTest.expected);
   });
 
-  it ('autoprefixer should add vendor prefixes like configured by options', function() {
-    loader.call({ options: { ngStylesLoader: { flexbox: false }}}, fixtures.autoprefixerConfigTest.actual)
+  it ('should add vendor prefixes like configured by options', function() {
+    loader.call({ options: { ngInlineStylesLoader: { flexbox: false }}}, fixtures.autoprefixerConfigTest.actual)
       .should
       .be
       .eql(fixtures.autoprefixerConfigTest.expected);
   });
 
-  it ('autoprefixer should add vendor prefixes like configured by query options', function() {
+  it ('should add vendor prefixes like configured by query options', function() {
     loader.call({ query: '?flexbox=false' }, fixtures.autoprefixerConfigTest.actual)
       .should
       .be
       .eql(fixtures.autoprefixerConfigTest.expected);
   });
 
-  it ('file should not be changed because options disable minification and autoprefixer', function() {
-    loader.call({ options: { ngStylesLoader: { minify: false, prefix: false }}}, fixtures.noChangeTest.actual)
+  it ('should not be changed because options disable minification and autoprefixer', function() {
+    loader.call({ options: { ngInlineStylesLoader: { minify: false, prefix: false }}}, fixtures.noChangeTest.actual)
       .should
       .be
       .eql(fixtures.noChangeTest.expected);
   });
 
-  it ('file should not be changed because query options disable minification and autoprefixer', function() {
+  it ('should not be changed because query options disable minification and autoprefixer', function() {
     loader.call({ query: '?minify=false&prefix=false' }, fixtures.noChangeTest.actual)
       .should
       .be
       .eql(fixtures.noChangeTest.expected);
+  });
+
+  it ('should change nothing because of no css but require calls', function() {
+    loader.call({}, fixtures.ignoreRequire.actual)
+      .should
+      .be
+      .eql(fixtures.ignoreRequire.expected);
   });
 });

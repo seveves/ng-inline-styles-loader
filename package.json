@@ -1,5 +1,5 @@
 {
-  "name": "ng-styles-loader",
+  "name": "ng-inline-styles-loader",
   "version": "0.0.1",
   "description": "A webpack loader for inlined stylesheets of angular components.",
   "main": "index.js",

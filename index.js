@@ -19,7 +19,7 @@ module.exports = function(source, sourcemap) {
   var query = loaderUtils.parseQuery(this.query);
 
   if (this.options != null) {
-    Object.assign(config, this.options['ngStylesLoader']);
+    Object.assign(config, this.options['ngInlineStylesLoader']);
   }
 
   Object.assign(config, query);
