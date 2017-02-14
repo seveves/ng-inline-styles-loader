@@ -12,9 +12,7 @@ For example the following angular component ...
 @Component({
   selector: "foo-bar",
   styles: [ ":fullscreen a { display: flex }"],
-  template: "
-    <div>Foo Bar</div>
-  ",
+  template: "<div>Foo Bar</div>"
 })
 export class FooBarComponent {}
 ```
@@ -23,9 +21,7 @@ export class FooBarComponent {}
 @Component({
   selector: "foo-bar",
   styles: [":-webkit-full-screen a{display:flex}:-moz-full-screen a{display:flex}:-ms-fullscreen a{display:flex}:fullscreen a{display:flex}"],
-  template: "
-    <div>Foo Bar</div>
-  ",
+  template: "<div>Foo Bar</div>"
 })
 export class FooBarComponent {}
 ```
