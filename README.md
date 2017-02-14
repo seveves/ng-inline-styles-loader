@@ -6,10 +6,34 @@ A simple webpack loader for inlined stylesheets of angular components (designed 
 
 Currently this loader supports minification by using [clean-css](https://github.com/jakubpawlowicz/clean-css) and adds vendor prefixes with [autoprefixer](https://github.com/postcss/autoprefixer).
 
+## example
+For example the following angular component ...
+```ts
+@Component({
+  selector: "foo-bar",
+  styles: [ ":fullscreen a { display: flex }"],
+  template: "
+    <div>Foo Bar</div>
+  ",
+})
+export class FooBarComponent {}
+```
+... would result in same same but different:
+```ts
+@Component({
+  selector: "foo-bar",
+  styles: [":-webkit-full-screen a{display:flex}:-moz-full-screen a{display:flex}:-ms-fullscreen a{display:flex}:fullscreen a{display:flex}"],
+  template: "
+    <div>Foo Bar</div>
+  ",
+})
+export class FooBarComponent {}
+```
+
 ## install
 `npm install ng-inline-styles-loader --save-dev`
 
-## example usage
+## usage
 chain the `ng-inline-styles-loader` to your currently used typescript loader:
 
 ```js
