@@ -17,6 +17,10 @@
     "loader",
     "ng"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seveves/ng-inline-styles-loader.git"
+  },
   "author": "Severin Friede <sevefriede@gmail.com>",
   "license": "MIT",
   "dependencies": {
