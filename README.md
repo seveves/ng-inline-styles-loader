@@ -1,5 +1,5 @@
 # ng-inline-styles-loader
-A simple webpack loader for inlined stylesheets of angular components (designed for people who like small components with inlined styles).
+A simple webpack loader for inlined stylesheets of angular components (designed for people who like small components with inlined css).
 
 Currently this loader supports minification by using [clean-css](https://github.com/jakubpawlowicz/clean-css) and adds vendor prefixes with [autoprefixer](https://github.com/postcss/autoprefixer).
 
