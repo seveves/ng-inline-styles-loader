@@ -87,4 +87,11 @@ describe('loader', function() {
       .be
       .eql(fixtures.ignoreRequire.expected);
   });
+
+  it ('should change nothing because there is nothing', function() {
+    loader.call({}, fixtures.ignoreEmpty.actual)
+      .should
+      .be
+      .eql(fixtures.ignoreEmpty.expected);
+  });
 });
