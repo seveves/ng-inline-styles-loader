@@ -3,8 +3,8 @@ var postcss = require('postcss');
 var autoprefixer = require('autoprefixer');
 var CleanCSS = require('clean-css');
 
-var stylesRegex = /(?=styles)([^]*)\s*\}\s*[`"']\s*\]/g
-var cssRegex = /[`"']([^`"']*)[`"']/g
+var stylesRegex = /(?=styles\s*[:|_])([^]*)\s*\}\s*[`"']\s*\]/g
+var cssRegex = /([^'`"]*\{[^\}]*\})/g
 
 var minify = function (input, config) {
   return config.minify ? new CleanCSS().minify(input).styles : input;
@@ -31,7 +31,9 @@ module.exports = function(source, sourcemap) {
   var stylesMatch = modifiedSource.match(stylesRegex);
   if (stylesMatch && stylesMatch.length) {  
     var modifiedStyles = stylesMatch[0].replace(cssRegex, (match, css) => {
-      return '\`' + minify(prefix(css, config), config) + '\`';
+      css = css.replace(/\\n/gm, '');
+      var minifiedAndPrefixed = minify(prefix(css, config), config);
+      return minifiedAndPrefixed.replace(/'/gm, '"');
     });
     modifiedSource = modifiedSource.replace(stylesRegex, modifiedStyles);
   }

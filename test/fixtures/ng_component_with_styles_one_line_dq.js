@@ -50,7 +50,7 @@ import { Animations } from '../../animations';
 @Component({
   animations: [ Animations.Visibility ],
   selector: 'buttons',
-  styles: [\`.dropdown-toggle::after{margin-left:0}\`, \`.dropdown-menu{min-width:0;padding:0}\`],
+  styles: [".dropdown-toggle::after{margin-left:0}", ".dropdown-menu{min-width:0;padding:0}"],
   template: \`
     <div *ngIf="thing.canBePrepended || thing.canBeAppended || thing.canHaveSubs"
           style="position: absolute; bottom: 10px; left: 10px; z-index: 99;" [@Visibility]="visibility">

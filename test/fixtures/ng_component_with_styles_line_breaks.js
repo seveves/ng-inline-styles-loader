@@ -60,7 +60,7 @@ import { Animations } from '../../animations';
   selector: 'buttons',
   styles: [
     \`.dropdown-toggle::after{margin-left:0}\`,
-    \`.dropdown-menu{min-width:0;padding:0}\`
+    \`.dropdown-menu{min-width:0;padding:0} \`
   ],
   template: \`
     <div *ngIf="thing.canBePrepended || thing.canBeAppended || thing.canHaveSubs"

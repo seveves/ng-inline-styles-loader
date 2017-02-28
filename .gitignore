@@ -39,4 +39,4 @@ Thumbs.db
 /node_modules/
 /coverage
 /test/coverage
-ng-inline-styles-loader-0.0.1.tgz
+ng-inline-styles-loader-*.tgz

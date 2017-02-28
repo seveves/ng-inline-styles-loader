@@ -19,4 +19,4 @@ test
 assets
 .idea
 
-ng-inline-styles-loader-0.0.1.tgz
+ng-inline-styles-loader-*.tgz

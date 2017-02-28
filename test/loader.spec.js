@@ -93,5 +93,27 @@ describe('loader', function() {
       .should
       .be
       .eql(fixtures.ignoreEmpty.expected);
+  }); 
+
+  it ('should prefix and minify styles of aot compiled ng component', function() {
+    loader.call({}, fixtures.ngAotComponent.actual)
+      .should
+      .be
+      .eql(fixtures.ngAotComponent.expected);
+  });
+  
+  it ('should prefix and minify styles of aot compiled ng component 2', function() {
+    loader.call({}, fixtures.ngAotComponent2.actual)
+      .should
+      .be
+      .eql(fixtures.ngAotComponent2.expected);
+  });
+
+  
+  it ('should prefix and minify styles of aot compiled ng component 3', function() {
+    loader.call({}, fixtures.ngAotComponent3.actual)
+      .should
+      .be
+      .eql(fixtures.ngAotComponent3.expected);
   });
 });

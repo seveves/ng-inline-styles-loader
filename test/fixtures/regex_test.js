@@ -24,8 +24,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
       line-height: 1.25;
       padding: .5rem 0rem;
       vertical-align: middle;
-    }
-  \`],
+    }\`],
   template: \`
     <div>Test</div>
     <template ngbModalContainer></template>

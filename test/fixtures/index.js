@@ -9,6 +9,9 @@ var autoprefixerConfigTest = require('./autoprefixer_config_test');
 var noChangeTest = require('./no_change_test');
 var ignoreRequire = require('./ignore_require_styles');
 var ignoreEmpty = require('./ignore_empty_styles');
+var ngAotComponent = require('./ng_aot_component');
+var ngAotComponent2 = require('./ng_aot_component_2');
+var ngAotComponent3 = require('./ng_aot_component_3');
 
 exports.ngComponentWithStylesAndLineBreaks = ngComponentWithStylesAndLineBreaks;
 exports.ngComponentWithStylesOnOneLine = ngComponentWithStylesOnOneLine;
@@ -21,3 +24,6 @@ exports.autoprefixerConfigTest = autoprefixerConfigTest;
 exports.noChangeTest = noChangeTest;
 exports.ignoreRequire = ignoreRequire;
 exports.ignoreEmpty = ignoreEmpty;
+exports.ngAotComponent = ngAotComponent;
+exports.ngAotComponent2 = ngAotComponent2;
+exports.ngAotComponent3 = ngAotComponent3;
