@@ -6,6 +6,8 @@ A simple webpack loader for inlined stylesheets of angular components (designed 
 
 Currently this loader supports minification by using [clean-css](https://github.com/jakubpawlowicz/clean-css) and adds vendor prefixes with [autoprefixer](https://github.com/postcss/autoprefixer).
 
+> **Notice:** This loader works with AOT compiled components but that is very experimental (but there are unit tests!)
+
 ## example
 For example the following angular component ...
 ```ts
